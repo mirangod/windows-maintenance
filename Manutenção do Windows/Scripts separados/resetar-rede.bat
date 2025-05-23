@@ -1,0 +1,16 @@
+@echo off
+title Resetar Rede
+color 0E
+echo Resetando Winsock...
+netsh winsock reset
+echo Resetando IP...
+netsh int ip reset
+echo Liberando IP atual...
+ipconfig /release
+echo Renovando IP...
+ipconfig /renew
+echo Limpando cache DNS...
+ipconfig /flushdns
+echo Rede resetada com sucesso.
+pause
+exit
